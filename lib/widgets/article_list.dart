@@ -8,12 +8,18 @@ class Articles extends StatelessWidget {
   const Articles({super.key, this.category});
 
   void toArticlePage(BuildContext context, dynamic feed) {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => ArticlePage(
-                  feed: feed,
-                )));
+    if (feed.urlToImage == null) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text("No Article Available."),
+      ));
+    } else {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => ArticlePage(
+                    feed: feed,
+                  )));
+    }
   }
 
   @override
