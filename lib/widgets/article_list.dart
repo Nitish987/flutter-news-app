@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/pages/article_page.dart';
-import 'package:newsapp/services/news.dart';
+import 'package:newsapp/services/news_service.dart';
 
 class Articles extends StatelessWidget {
   final String? category;

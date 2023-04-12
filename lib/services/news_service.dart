@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:newsapp/services/api.dart';
-import 'package:newsapp/services/Models.dart';
+import 'package:newsapp/models/news_models.dart';
 
 class News {
   final String? category;

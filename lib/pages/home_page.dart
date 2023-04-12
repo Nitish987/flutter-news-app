@@ -32,7 +32,17 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       appBar: AppBar(
         title: const Text('News App'),
-        bottom: TabBar(controller: _tabController, tabs: categoryTabs, isScrollable: true,),
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: categoryTabs,
+          isScrollable: true,
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+          ),
+        ],
       ),
       body: TabBarView(
         controller: _tabController,
